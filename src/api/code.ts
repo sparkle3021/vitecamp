@@ -1,11 +1,11 @@
 declare interface codeMessageMapTypes {
-  400: string;
-  401: string;
-  403: string;
-  404: string;
-  405: string;
-  500: string;
-  [key: string]: string;
+  400: string
+  401: string
+  403: string
+  404: string
+  405: string
+  500: string
+  [key: string]: string
 }
 
 const codeMessageMap: codeMessageMapTypes = {
@@ -15,10 +15,10 @@ const codeMessageMap: codeMessageMapTypes = {
   404: '[404]:请求路径错误',
   405: '[405]:请求方法错误',
   500: '[500]:服务器错误',
-};
+}
 
 const showCodeMessage = (code: number | string): string => {
-  return codeMessageMap[JSON.stringify(code)] || '网络连接异常,请稍后再试!';
-};
+  return codeMessageMap[JSON.stringify(code)] || '网络连接异常,请稍后再试!'
+}
 
-export default showCodeMessage;
+export default showCodeMessage

@@ -1,11 +1,11 @@
-import { defineConfig, loadEnv } from 'vite';
-import { resolve } from 'path';
-import presets from './presets/presets';
+import { resolve } from 'path'
+import { defineConfig, loadEnv } from 'vite'
+import presets from './presets/presets.js'
 
 // https://vitejs.dev/config/
 export default defineConfig((env) => {
   // env 环境变量
-  const viteEnv = loadEnv(env.mode, process.cwd());
+  const viteEnv = loadEnv(env.mode, process.cwd())
 
   return {
     base: viteEnv.VITE_BASE,
@@ -21,7 +21,8 @@ export default defineConfig((env) => {
     server: {
       host: true, // host设置为true才可以使用network的形式，以ip访问项目
       port: 8080, // 端口号
-      open: true, // 自动打开浏览器
+      open: false, // 自动打开浏览器
+      hmr: true, // 热更新
       cors: true, // 跨域设置允许
       strictPort: true, // 如果端口已占用直接退出
       // 接口代理
@@ -60,5 +61,5 @@ export default defineConfig((env) => {
         },
       },
     },
-  };
-});
+  }
+})

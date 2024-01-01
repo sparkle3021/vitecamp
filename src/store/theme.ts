@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia';
+import { defineStore } from 'pinia'
 
 const theme = defineStore({
   // 这里的id必须为唯一ID
@@ -7,7 +7,7 @@ const theme = defineStore({
     return {
       themeType: '亮蓝色',
       themeColor: '#2080F0FF',
-    };
+    }
   },
   // 等同于vuex的getter
   getters: {
@@ -18,9 +18,9 @@ const theme = defineStore({
   actions: {
     // actions可以用async做成异步形式
     setThemeType(type: string) {
-      this.themeType = type;
+      this.themeType = type
     },
   },
-});
+})
 
-export default theme;
+export default theme

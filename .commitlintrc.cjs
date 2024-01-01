@@ -7,4 +7,4 @@ module.exports = {
       ['init', 'build', 'ci', 'chore', 'docs', 'feat', 'fix', 'perf', 'refactor', 'revert', 'style', 'test'],
     ],
   },
-};
+}

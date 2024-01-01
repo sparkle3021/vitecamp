@@ -1,5 +1,5 @@
 // 需要鉴权的业务路由
-import { RouteRecordRaw } from 'vue-router';
+import { RouteRecordRaw } from 'vue-router'
 
 const asyncRoutes: Array<RouteRecordRaw> = [
   {
@@ -11,15 +11,6 @@ const asyncRoutes: Array<RouteRecordRaw> = [
     },
     component: () => import('@/views/home/index.vue'),
   },
-  {
-    path: '/process',
-    name: 'process',
-    meta: {
-      title: 'Template configuration process',
-      icon: '',
-    },
-    component: () => import('@/views/example/MarkdownPage.vue'),
-  },
-];
+]
 
-export default asyncRoutes;
+export default asyncRoutes

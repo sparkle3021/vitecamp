@@ -1,13 +1,15 @@
 <template>
   <div class="container max-w-3xl mx-auto mt-40">
     <div class="h-60 mb-8">
-      <div class="w-52 h-52 mx-auto mb-4"><vitecamp class="w-52 h-52"></vitecamp></div>
+      <div class="w-52 h-52 mx-auto mb-4">
+        <vitecamp class="w-52 h-52"></vitecamp>
+      </div>
     </div>
     <div class="text-center text-md">
-      <h1 class="font-serif font-bold text-4xl mb-8">{{ t('hello') }} , {{ t('welcome to') }} Vitecamp</h1>
+      <h1 class="font-serif font-bold text-4xl mb-8">{{ $t('hello') }} , {{ $t('welcome to') }} Vitecamp</h1>
       <p class="mb-10">
         <strong>Vitecamp</strong>
-        {{ t('includes features') }}
+        {{ $t('includes features') }}
       </p>
       <p class="mb-10">
         <template v-for="(item, index) in featureList" :key="index">
@@ -15,21 +17,20 @@
           <template v-if="!item.isEnd"> | </template>
         </template>
       </p>
-      <div>{{ t('before coding') }} , {{ t('setup ide') }} <strong>VSCode</strong> + <strong>Volar</strong></div>
+      <div>{{ $t('before coding') }} , {{ $t('setup ide') }} <strong>VSCode</strong> + <strong>Volar</strong></div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import vitecamp from '@/assets/svg/vitecamp.svg?component';
+import vitecamp from '@/assets/svg/vitecamp.svg?component'
 
-const { t } = useI18n();
-ElMessage.success({ message: 'welcome', duration: 1000 });
+ElMessage.success({ message: 'welcome', duration: 1000 })
 ElNotification({
   title: 'Issue',
   message: 'If you encounter problems in using the template, please raise them in the issue',
   duration: 0,
-});
+})
 const featureList = [
   {
     name: 'Vite3',
@@ -100,7 +101,7 @@ const featureList = [
     href: 'https://github.com/rstacruz/nprogress',
     isEnd: true,
   },
-];
+]
 </script>
 
 <style lang="scss" scoped>
