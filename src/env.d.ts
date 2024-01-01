@@ -23,6 +23,18 @@ declare module '*.md' {
   export default component;
 }
 
+
+declare module 'element-plus/dist/locale/zh-cn.mjs' {
+  const zhLocale: any;
+  export default zhLocale;
+}
+
+declare module 'element-plus/dist/locale/en.mjs' {
+  const enLocale: any;
+  export default enLocale;
+}
+
+
 // 声明 vite 环境变量
 declare interface ImportMetaEnv {
   readonly VITE_BASE: string;
