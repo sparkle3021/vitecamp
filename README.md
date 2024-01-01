@@ -67,10 +67,6 @@
 
 ## 现在可以试试!
 
-### GitHub 模板
-
-[使用这个模板创建仓库](https://github.com/nekobc1998923/vitecamp/generate).
-
 ### 克隆到本地
 
 ```bash
